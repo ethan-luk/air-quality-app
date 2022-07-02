@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href=" {% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Air Quality Sensor</h1>
+    <p class='date'>Last Updated: {{ today }}</p>
+    <br>
+    <div class="heatmap">
+        Heatmap
+    </div>
+    <div class="table">
+        <br>
+        <table>
+            <th>Pollutant</th>
+            <tr>
+                <td>Carbon Dioxide</td>
+            </tr>
+            <tr>
+                <td>Carbon Monoxide</td>
+            </tr>
+            <tr>
+                <td>Ammonia</td>
+            </tr>
+            <tr>
+                <td>Benzene</td>
+            </tr>
+        </table>
+    </div>
+    <br style="clear:both">
+    <button class="refresh" onClick="window.location.reload();">Refresh Page</button>
+</body>
+</html>
